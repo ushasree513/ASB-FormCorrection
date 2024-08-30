@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        div.form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+
+    <img src ="./Tickmark.svg" alt="tickmark">
+    <h1 style="color:#023183">Credit card details submitted successfully</h1>
+    </body>
+
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert('Form submitted successfully!');
+            // Optionally, you can reset the form after submission
+            document.getElementById('customerForm').reset();
+            return false; // Prevent the form from submitting in the traditional way
+        }
+    </script>
+
+</body>
+</html>

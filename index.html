@@ -159,7 +159,7 @@ form div.input-group:nth-child(even) input {
         <div class="login-form">
             <h2>Enter Credit Card Details</h2>
             <div class="form-warning">
-                <p color:Red>Please fill Date of Birth, Industry Code, and Address</p>
+                <p color:Red>Please fill Date of Birth, Occupation Code, and Address</p>
               </div>
             <form style="margin-right:20px">
                 <div class="input-group">
@@ -192,11 +192,11 @@ form div.input-group:nth-child(even) input {
                 </div>
                 <div class="input-group">
                     <label for="taxIdNum">Tax ID Number</label>
-                    <input type="text" id="taxIdNum" name="taxIdNum">
+                    <input type="text" id="taxIdNum" name="taxIdNum" value= "925076667" required>
                 </div>
                 <div class="input-group">
                     <label for="industryCode">Industry Code</label>
-                    <input type="text" id="industryCode" name="IndustryCode">
+                    <input type="text" id="industryCode" name="IndustryCode" value="20470" required>
                 </div>
                 <div class="input-group">
                     <label for="address">Address</label>
@@ -215,7 +215,7 @@ form div.input-group:nth-child(even) input {
                 letter-spacing: .03rem;
                 text-decoration: none;
                 color: #000;
-                background: #fcbd1b;">Submit</button>
+                background: #fcbd1b;" onclick="submitForm()">Submit</button>
                <!-- <div class="forgot-links">
                     <a href="#">Forgot your password?</a><br>
                     <a href="#">Forgot your username?</a>
@@ -242,20 +242,17 @@ form div.input-group:nth-child(even) input {
 
 
             // Validate input fields (add more validation as needed)
-            if (firstName === "" || lastName === "" || customerId === "") {
-                alert("Please fill in all fields.");
-                return;
-            }
+           
 
             
            
 
             const jsonData = {              
-                    CustomerID: customerId,
-                    FirstName: firstName,
-                    FullName: `${firstName} ${lastName}`, 
-                    TaxIDNum: taxIdNum,
-                    IndustryCode: industryCode
+                    CustomerID: "1000001",
+                    FirstName: "Jack",
+                    FullName: "Jack Horner", 
+                    TaxIDNum: "925076667",
+                    IndustryCode: "20470"
 
             };
             
