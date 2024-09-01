@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap_3.4.1.min.js"></script>
+    <style>
+        body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+form {
+    margin-right: 0px !important;
+    display: flex;
+    flex-flow: wrap;
+}
+.container {
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 450px;
+    margin: 0 auto;
+}
+form div.input-group:nth-child(even) input {
+    width:89%;
+}
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    margin-bottom: 15px;
+    text-align: left;
+    width:50%;
+   
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 84%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.login-btn {
+    background-color: #f0ad4e;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background-color: #ec971f;
+}
+
+.forgot-links a {
+    color: #f0ad4e;
+    text-decoration: none;
+}
+
+.forgot-links a:hover {
+    text-decoration: underline;
+}
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #f0ad4e;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.footer a {
+    color: #f0ad4e;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="Logo.svg" alt="Logo">
+        </div>
+        <div class="login-form">
+            <h2>Credit Card Form</h2>
+            <form style="margin-right:20px" class="FormData">
+               
+               
+               <!-- <div class="forgot-links">
+                    <a href="#">Forgot your password?</a><br>
+                    <a href="#">Forgot your username?</a>
+                </div>-->
+            </form>
+        </div>
+       
+    </div>
+
+
+
+
+   
+
+    <script>
+        $(document).ready(function () {
+            debugger;
+            var customerID=localStorage.getItem("customerid");
+            console.log(customerID);
+
+            if (customerID == 1000002){
+                var offer_Card_form =` 
+                <div class="input-group" style="width:100%">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="Address" style="width:95%">
+                </div>
+                
+              
+              
+                <button type="button" style="padding: 15px 28px;
+                justify-content: center;
+                width: 100%;
+                display: block;
+                font-size: 1rem;
+                line-height: 1.43rem;
+                font-weight: 600;
+                letter-spacing: .03rem;
+                text-decoration: none;
+                color: #000;
+                background: #fcbd1b;" onclick="submitForm()">Submit</button>`
+            }
+            else if (customerID == 1000003){
+                var offer_Card_form =` 
+                <div class="input-group" style="width:100%">
+                    <label for="address">ECDDInValid</label>
+                    <input type="text" id="address" name="Address" style=" width: 95%;">
+                </div>
+                
+              
+              
+                <button type="button" style="padding: 15px 28px;
+                justify-content: center;
+                width: 100%;
+                display: block;
+                font-size: 1rem;
+                line-height: 1.43rem;
+                font-weight: 600;
+                letter-spacing: .03rem;
+                text-decoration: none;
+                color: #000;
+                background: #fcbd1b;" onclick="submitForm()">Submit</button>`
+            }
+            else {
+                var offer_Card_form =` 
+               <div class="input-group">
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" id="dateOfBirth" name="DateOfBirth">
+                </div>
+                <div class="input-group">
+                    <label for="occupationCode">Occupation Code</label>
+                    <input type="text" id="occupationCode" name="OccupationCode">
+                </div>
+               
+                <div class="input-group">
+                    <label for="industryCode">Industry Code</label>
+                    <input type="text" id="industryCode" name="IndustryCode">
+                </div>
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="Address">
+                </div>
+                
+              
+              
+                <button type="button" style="padding: 15px 28px;
+                justify-content: center;
+                width: 100%;
+                display: block;
+                font-size: 1rem;
+                line-height: 1.43rem;
+                font-weight: 600;
+                letter-spacing: .03rem;
+                text-decoration: none;
+                color: #000;
+                background: #fcbd1b;" onclick="submitForm()">Submit</button>`
+            }
+            $('.FormData').append(offer_Card_form);
+
+            const jsonData = 
+            {
+  "SubjectID": "1000004",
+  "ContextName": "Customer",
+  "ContainerName": "NextBestAction",
+  "AppID": "SmartDecisor",
+  "ContainerName": "NextBestAction",
+  "RankedResults": [
+    {
+      "SubjectID": "1000004",
+      "Name": "DefaultOffer",
+      "Issue": "Default",
+      "Group": "Validation",
+      "Channel": "Web",
+      "Direction": "Inbound",
+      "Treatment": "Default offer Web",
+      "Rank": 1,
+      "InteractionID": "-6876730768382387946",
+      "Outcome": "Accepted"
+    }
+  ]
+}
+
+$.post("https://lnd01.areteans.com/prweb/api/PegaMKTContainer/v4/capture_response",
+        JSON.stringify(jsonData),
+        function(data, status){
+            console.log(data);
+           
+        });
+
+       
+           
+        })
+        function submitForm(){
+            window.location.href= "Success.html";
+        }   
+    </script>
+</body>
+</html>
+
+

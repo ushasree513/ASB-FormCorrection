@@ -1,295 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Banking Application Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!---Edits------>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/CelebrusInsert.js"></script> -->
     <style>
-        body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-select {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #444;
-    color: #fff;
-}
-form {
-    margin-right: 0px !important;
-    display: flex;
-    flex-flow: wrap;
-}
-.container {
-    text-align: center;
-}
-
-.logo img {
-    width: 100px;
-    margin-bottom: 20px;
-}
-
-.login-form {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 450px;
-    margin: 0 auto;
-}
-form div.input-group:nth-child(even) input {
-    width:89%;
-}
-.login-form h2 {
-    margin-bottom: 20px;
-}
-
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-    margin-bottom: 15px;
-    text-align: left;
-    width:50%;
-   
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    width: 84%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #444;
-    color: #fff;
-}
-
-.input-group input::placeholder {
-    color: #bbb;
-}
-
-.remember-me {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.remember-me input {
-    margin-right: 10px;
-}
-
-.login-btn {
-    background-color: #f0ad4e;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.login-btn:hover {
-    background-color: #ec971f;
-}
-
-.forgot-links a {
-    color: #f0ad4e;
-    text-decoration: none;
-}
-
-.forgot-links a:hover {
-    text-decoration: underline;
-}
-
-.register-link {
-    margin-top: 20px;
-}
-
-.register-link a {
-    color: #f0ad4e;
-    text-decoration: none;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
-
-.footer {
-    margin-top: 20px;
-    font-size: 12px;
-}
-
-.footer a {
-    color: #f0ad4e;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-
-}
-.form-warning {
-
-  color: #ff0000; /* Change the text color to white for better contrast */
-  padding: 10px;
-  text-align: center;
-  
-  
-}
+        .col-12.row.m-0.p-0.w-100.justify-content-between.login-form-wrapper {
+             height: 100vh !important;
+             display: flex;
+             align-items: center;
+             background:#f6f7fb !important;
+        }
+        .login .sidebar {
+            min-width: 466px;
+            height: 100vh;
+            display: inline-flex;
+        }
+        .bg-lightSkyBlue.left-banner-text-primary {
+            background-color: #0580acc9;
+        }
+        .login .content-main {
+                height: 100vh;
+                background:#f6f7fb !important;
+            }
+        @media only screen and (max-width: 768px) {
+            .login .sidebar {
+                display: none;
+            }
+            .login .content-main {
+                height: 100vh;
+                background:#f6f7fb !important;
+            }
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="logo">
-            <img src="Logo.svg" alt="Logo">
+
+<body class="mob-bg-blue-dark">
+    <div class="container-fluid m-0 p-0 wrapper login max-width-100">
+        <div class="col-12 m-0 p-0">
+            <form class="form-horizontal w-sm-100">
+                <!---Edits------>
+                <div class="col-12 row m-0 p-0 w-100 justify-content-between login-form-wrapper">
+                    <!------Edits-->
+                    <!-- LEFT SIDEBAR -->
+                    <div class="m-0 p-0 sidebar col position-relative order-mob-last">
+                        <!---Edits------>
+                        <img src="assets/images/login-left-img.png" class="img-fluid">
+                        <!---Edits------>
+                        <div class="w-100 bg-lightSkyBlue position-absolute left-banner-text-primary hidden-xs">
+                            <h1 class="font-Oswald-Medium">Explore Endless Possibities</h1>
+                            <h2 class="font-Oswald-Light">we are here to make it possible</h2>
+                        </div>
+                    </div>
+                    <!-- MAIN CONTENT -->
+                    <div class="content-main flex-grow-2  bg-Grey text-center col">
+                        <!---Edits------>
+                        <div class="align-content-center h-100 justify-content-center mx-0 row w-100">
+                            <!---Edits------>
+                            <!-- <img src="assets/images/logo-loginpage-removebg.png" class="mb-2"> -->
+                            <!-- <br> -->
+                            <div class="col-lg-12 col-6"><img src="Logo.svg" class="mb-5  img-fluid" style="width:100px"></div>
+                            <!---Edits------>
+                            <div class="col-12"></div>
+                            <!---Edits------>
+                            <form class="form-horizontal w-50 w-sm-100">
+                                <!---Edits------>
+                                <div class="col-lg-10 col-xl-6 flex-column mx-0 row">
+                                    <div class="form-group justify-content-center mb-1">
+                                        <div class="col-12 px-0 d-flex user-inputs">
+                                            <img src="assets/images/user-icon.png">
+                                            <input id="customerid" name="customerid" type="text" placeholder="customerid" class="form-control border-info radius-0 font-oxygen">
+                                        </div>
+                                    </div>
+                                    <div class="form-group justify-content-center">
+                                        <div class="col-12 px-0 d-flex user-inputs">
+                                            <img src="assets/images/passwod-icon.png">
+                                            <input type="password" placeholder="Password" class="form-control border-info radius-0 font-oxygen">
+                                        </div>
+                                    </div>
+                                    <div class="form-group justify-content-center font-oxygen">
+                                        <div class="w-100">
+                                            <a href="Savings_Offer.html" target="_self" class="bg-Darkblue btn btn-block font-weight-bold mb-4 text-white login-btn" onclick="storage()">
+								  Login
+								</a>
+                                        </div>
+                                        <div class="font-weight-bold text-center">
+                                            <a href="#" style="color:#005cb7;"><u>Trouble logging in?</u></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
         </div>
-        
-        <div class="login-form">
-            <h2>Enter Credit Card Details</h2>
-            <div class="form-warning">
-                <p color:Red>Please fill Date of Birth, Occupation Code, and Address</p>
-              </div>
-            <form style="margin-right:20px">
-                <div class="input-group">
-                    <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" value="Jack" required>
-                </div>
-                <div class="input-group">
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" value="Horner"required>
-                </div>
-                <div class="input-group">
-                    <label for="customerId">Customer ID:</label>
-                    <input type="text" id="customerId" name="customerId" value= " 100001" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="gender">Gender</label>
-                    <select id="gender" name="Gender">
-                        <option value="M">M</option>
-                        <option value="F">F</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label for="dateOfBirth">Date of Birth</label>
-                    <input type="date" id="dateOfBirth" name="DateOfBirth">
-                </div>
-                <div class="input-group">
-                    <label for="occupationCode">Occupation Code</label>
-                    <input type="text" id="occupationCode" name="occupationCode">
-                </div>
-                <div class="input-group">
-                    <label for="taxIdNum">Tax ID Number</label>
-                    <input type="text" id="taxIdNum" name="taxIdNum" value= "925076667" required>
-                </div>
-                <div class="input-group">
-                    <label for="industryCode">Industry Code</label>
-                    <input type="text" id="industryCode" name="industryCode" value="20470" required>
-                </div>
-                <div class="input-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="Address">
-                </div>
-                
-              
-              
-                <button type="button" style="padding: 15px 28px;
-                justify-content: center;
-                width: 100%;
-                display: block;
-                font-size: 1rem;
-                line-height: 1.43rem;
-                font-weight: 600;
-                letter-spacing: .03rem;
-                text-decoration: none;
-                color: #000;
-                background: #fcbd1b;" onclick="submitForm()">Submit</button>
-              
-            </form>
-        </div>
-       
     </div>
-
-
-
-
-   
-
     <script>
-        function submitForm() {
-            // Get form elements
-          /*  const firstName = document.getElementById("firstName").value;
-            const lastName = document.getElementById("lastName").value;
-            const customerId = document.getElementById("customerId").value;
-            const taxIdNum = document.getElementById("taxIDNum").value;
-            const industryCode = document.getElementById("industryCode").value;
-            console.log(firstName, lastName, customerId, taxIdNum, industryCode);
-            */
-
-
-            // Validate input fields (add more validation as needed)
-           
-
-            
-           
-
-            const jsonData = {              
-                    CustomerID: "1000001",
-                    FirstName: "Jack",
-                    FullName: "Jack Horner", 
-                    TaxIDNum: "925076667",
-                    IndustryCode: "20470"
-
-            };
-            
-
-           
-            fetch('https://lnd01.areteans.com/prweb/api/RealTimeTest/V1/RTEtrigger', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // Add any additional headers required by your API (e.g., authentication)
-                },
-                body: JSON.stringify(jsonData)
-            })
-            .then(response => {
-                    if (response.ok) {
-                        return response.json();
-                    } else {
-                        throw new Error('API request failed:', response.status, response.statusText);
-                    }
-                })
-                .then(data => {
-                    if (data.RTStatus === "Real Time Event Executed Successfully") {
-                        console.log("Data is successfully posted");
-                        window.location.href= "Success.html";
-                      
-                        // You can optionally display a success message on the web page using DOM manipulation
-                    } else {
-                        console.error('API response is not as expected:', data.RTStatus);
-                        // Handle other response statuses appropriately
-                    }
-                })
-            .catch(error => {
-                console.error('API request failed:', error);
-                // Optionally, display an error message to the user
-            });
-
-              
-
-                }
+        function storage(){
+            localStorage.clear(customerid);
+            const customerId = document.getElementById("customerid").value;
+            localStorage.setItem("customerid", customerId);
+        }
+        
     </script>
 </body>
+
 </html>
